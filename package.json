@@ -40,7 +40,6 @@
     "sinon": "^1.17.3"
   },
   "peerDependencies": {
-    "react": "*",
-    "react-native": ">= 0.60.0"
+    "react": "*"
   }
 }
