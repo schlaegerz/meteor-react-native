@@ -89,16 +89,7 @@ function _throwOrLog(from, e) {
 // no-op). This has the benefit of not adding an unnecessary stack
 // frame on the client.
 function withNoYieldsAllowed(f) {
-  if ((typeof Meteor === 'undefined') || Meteor.isClient) {
     return f;
-  } else {
-    return function () {
-      var args = arguments;
-      Meteor._noYieldsAllowed(function () {
-        f.apply(null, args);
-      });
-    };
-  }
 }
 
 var nextId = 1;
